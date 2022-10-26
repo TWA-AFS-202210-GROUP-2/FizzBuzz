@@ -19,6 +19,18 @@ namespace FizzBuzzTest
         }
 
         [Fact]
+        public void Should_return_Fizz_When_CountOff_Given_multiple_of_3()
+        {
+            //given
+            var fizzBuzz = new FizzBuzzGame();
+            int number = 6;
+            //when
+            var result = fizzBuzz.CountOff(number);
+            //then
+            Assert.Equal("Fizz", result);
+        }
+
+        [Fact]
         public void Should_return_Buzz_When_CountOff_Given_multiple_of_5()
         {
             //given
