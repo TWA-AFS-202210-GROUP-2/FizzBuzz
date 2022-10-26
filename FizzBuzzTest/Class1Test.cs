@@ -138,5 +138,20 @@ namespace FizzBuzzTest
             Assert.Equal("FizzWhizz", result42);
             Assert.Equal("Fizz", result63);
         }
+
+        [Fact]
+        public void Should_return_Fizz_when_count_off_given_only_DivisiblByFive_and_Seven()
+        {
+            // given
+            var fizzbuzzgame = new FizzBuzzGame();
+
+            // when
+            string result70 = fizzbuzzgame.CountOff(70);
+            string result35 = fizzbuzzgame.CountOff(35);
+
+            // then
+            Assert.Equal("BuzzWhizz", result70);
+            Assert.Equal("Fizz", result35);
+        }
     }
 }
