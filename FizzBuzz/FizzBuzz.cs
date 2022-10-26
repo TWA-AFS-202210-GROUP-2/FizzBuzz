@@ -11,10 +11,48 @@ namespace FizzBuzz
         private readonly int seven = 7;
         public string CountOff(int number)
         {
-            bool isNormalNumber = Contain3(number);
-            if (isNormalNumber)
+            bool isContains3 = Contain3(number);
+            bool isDivisiblByThree = DivisiblByThree(number);
+            bool isDivisiblByFive = DivisiblByFive(number);
+            bool isDivisiblBySeven = DivisiblBySeven(number);
+            if (isContains3)
             {
                 return "Fizz";
+            }
+
+            if (isDivisiblByThree & !isDivisiblByFive & !isDivisiblBySeven)
+            {
+                return "Fizz";
+            }
+
+            if (!isDivisiblByThree & isDivisiblByFive & !isDivisiblBySeven)
+            {
+                return "Buzz";
+            }
+
+            if (!isDivisiblByThree & !isDivisiblByFive & isDivisiblBySeven)
+            {
+                return "Whizz";
+            }
+
+            if (isDivisiblByThree & isDivisiblByFive & !isDivisiblBySeven)
+            {
+                return "FizzBuzz";
+            }
+
+            if (!isDivisiblByThree & isDivisiblByFive & isDivisiblBySeven)
+            {
+                return "BuzzWhizz";
+            }
+
+            if (isDivisiblByThree & !isDivisiblByFive & isDivisiblBySeven)
+            {
+                return "FizzWhizz";
+            }
+
+            if (isDivisiblByThree & isDivisiblByFive & isDivisiblBySeven)
+            {
+                return "FizzBuzzWhizz";
             }
 
             return number.ToString();

@@ -29,6 +29,7 @@ namespace FizzBuzzTest
             Assert.Equal("1", result);
         }
 
+        [Fact]
         public void Should_return_true_when_count_off_given_contains_3()
         {
             // given
@@ -41,7 +42,9 @@ namespace FizzBuzzTest
             Assert.True(result);
         }
 
-        public void Should_return_Fizz_when_count_off_given_contains_3() {
+        [Fact]
+        public void Should_return_Fizz_when_count_off_given_contains_3()
+        {
             // given
             var fizzbuzzgame = new FizzBuzzGame();
 
@@ -49,7 +52,24 @@ namespace FizzBuzzTest
             string result = fizzbuzzgame.CountOff(31);
 
             // then
-            Assert.Equal(result, "Fizz");
+            Assert.Equal("Fizz", result);
+        }
+
+        [Fact]
+        public void Should_return_Fizz_when_count_off_given_only_DivisiblByThree()
+        {
+            // given
+            var fizzbuzzgame = new FizzBuzzGame();
+
+            // when
+            string result3 = fizzbuzzgame.CountOff(3);
+            string result6 = fizzbuzzgame.CountOff(6);
+            string result9 = fizzbuzzgame.CountOff(9);
+
+            // then
+            Assert.Equal("Fizz", result3);
+            Assert.Equal("Fizz", result6);
+            Assert.Equal("Fizz", result9);
         }
     }
 }
