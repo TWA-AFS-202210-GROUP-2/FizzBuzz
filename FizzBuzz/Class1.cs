@@ -41,7 +41,7 @@ namespace FizzBuzz
                 return "bizz";
             }
 
-            if (number % 5 == 0)
+            if (number % 7 == 0)
             {
                 return "wizz";
             }

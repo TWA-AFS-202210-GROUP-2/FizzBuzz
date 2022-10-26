@@ -67,7 +67,7 @@ namespace FizzBuzzTest
             //when
             var result = new Student().Count(number);
             //then
-            Assert.Equal("fizwizz", result);
+            Assert.Equal("fizzwizz", result);
         }
 
         [Fact]
@@ -78,7 +78,7 @@ namespace FizzBuzzTest
             //when
             var result = new Student().Count(number);
             //then
-            Assert.Equal("fizwizz", result);
+            Assert.Equal("fizzbizz", result);
         }
 
         [Fact]
@@ -89,7 +89,7 @@ namespace FizzBuzzTest
             //when
             var result = new Student().Count(number);
             //then
-            Assert.Equal("bizwizz", result);
+            Assert.Equal("bizzwizz", result);
         }
 
         [Fact]
@@ -100,7 +100,7 @@ namespace FizzBuzzTest
             //when
             var result = new Student().Count(number);
             //then
-            Assert.Equal("fizzbizwizz", result);
+            Assert.Equal("fizzbizzwizz", result);
         }
 
         [Fact]
