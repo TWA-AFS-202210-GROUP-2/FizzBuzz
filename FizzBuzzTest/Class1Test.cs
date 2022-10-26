@@ -43,5 +43,17 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("Buzz", result);
         }
+
+        [Fact]
+        public void Should_Whizz_when_countoff_given_only_multiply_of_7()
+        {
+            //given
+            FizzBuzz class1 = new FizzBuzz();
+
+            //when
+            var result = class1.CountOff(7);
+            //then
+            Assert.Equal("Whizz", result);
+        }
     }
 }
