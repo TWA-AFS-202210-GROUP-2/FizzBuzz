@@ -71,5 +71,22 @@ namespace FizzBuzzTest
             Assert.Equal("Fizz", result6);
             Assert.Equal("Fizz", result9);
         }
+
+        [Fact]
+        public void Should_return_Fizz_when_count_off_given_only_DivisiblByFive()
+        {
+            // given
+            var fizzbuzzgame = new FizzBuzzGame();
+
+            // when
+            string result5 = fizzbuzzgame.CountOff(5);
+            string result10 = fizzbuzzgame.CountOff(10);
+            string result20 = fizzbuzzgame.CountOff(20);
+
+            // then
+            Assert.Equal("Buzz", result5);
+            Assert.Equal("Buzz", result10);
+            Assert.Equal("Buzz", result20);
+        }
     }
 }
