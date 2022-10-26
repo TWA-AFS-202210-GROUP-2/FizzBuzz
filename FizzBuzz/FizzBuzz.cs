@@ -9,6 +9,11 @@ namespace FizzBuzz
         private readonly int seven = 7;
         public string CountOff(int number)
         {
+            if (number % three == 0 && number % five == 0 && number % seven == 0)
+            {
+                return "FizzBuzzWhizz";
+            }
+
             if (number % three == 0 && number % five == 0)
             {
                 return "FizzBuzz";
