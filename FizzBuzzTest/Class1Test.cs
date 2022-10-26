@@ -7,12 +7,15 @@ namespace FizzBuzzTest
     public class Class1Test
     {
         [Fact]
-        public void Test1()
+        public void Should_normal_number_When_CountOff_Given_normal_number()
         {
-            Class1 class1 = new Class1();
-
+            //given
+            var fizzBuzz = new FizzBuzzGame();
+            int number = 1;
+            //when
+            var result = fizzBuzz.CountOff(number);
             //then
-            Assert.NotNull(class1);
+            Assert.Equal("1", result);
         }
     }
 }
