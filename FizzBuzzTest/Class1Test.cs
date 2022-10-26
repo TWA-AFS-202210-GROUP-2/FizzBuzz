@@ -1,4 +1,5 @@
 using FizzBuzz;
+using FizzBuzz;
 using Moq;
 using Xunit;
 
@@ -26,6 +27,18 @@ namespace FizzBuzzTest
 
             // then
             Assert.Equal("1", result);
+        }
+
+        public void Should_return_true_when_count_off_given_contains_3()
+        {
+            // given
+            var fizzbuzzgame = new FizzBuzzGame();
+
+            // when
+            bool result = fizzbuzzgame.Contain3(31);
+
+            // then
+            Assert.True(result);
         }
     }
 }
