@@ -14,5 +14,18 @@ namespace FizzBuzzTest
             //then
             Assert.NotNull(class1);
         }
+
+        [Fact]
+        public void Should_return_norml_number_when_count_off_given_normal_number()
+        {
+            // given
+            var fizzbuzzgame = new FizzBuzzGame();
+
+            // when
+            string result = fizzbuzzgame.CountOff(1);
+
+            // then
+            Assert.Equal("1", result);
+        }
     }
 }
