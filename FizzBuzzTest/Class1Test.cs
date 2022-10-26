@@ -87,7 +87,7 @@ namespace FizzBuzzTest
             FizzBuzz class1 = new FizzBuzz();
 
             //when
-            var result = class1.CountOff(35);
+            var result = class1.CountOff(70);
             //then
             Assert.Equal("BuzzWhizz", result);
         }
@@ -102,6 +102,18 @@ namespace FizzBuzzTest
             var result = class1.CountOff(105);
             //then
             Assert.Equal("FizzBuzzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_Fizz_when_countoff_given_number_contains_3()
+        {
+            //given
+            FizzBuzz class1 = new FizzBuzz();
+
+            //when
+            var result = class1.CountOff(300);
+            //then
+            Assert.Equal("Fizz", result);
         }
     }
 }
