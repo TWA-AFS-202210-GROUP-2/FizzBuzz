@@ -73,7 +73,7 @@ namespace FizzBuzzTest
         [Fact]
         public void Should_return_BuzzWhizz_when_given_5and7times_number()
         {
-            int number = 35;
+            int number = 70;
             var fizzBuzz = new FizzBuzz();
             var shout = FizzBuzz.CountOff(number);
             Assert.Equal("BuzzWhizz", shout);
@@ -86,6 +86,15 @@ namespace FizzBuzzTest
             var fizzBuzz = new FizzBuzz();
             var shout = FizzBuzz.CountOff(number);
             Assert.Equal("FizzBuzzWhizz", shout);
+        }
+
+        [Fact]
+        public void Should_return_FizzBuzzWhizz_when_given_number_contain_three()
+        {
+            int number = 33;
+            var fizzBuzz = new FizzBuzz();
+            var shout = FizzBuzz.CountOff(number);
+            Assert.Equal("Fizz", shout);
         }
     }
 }
