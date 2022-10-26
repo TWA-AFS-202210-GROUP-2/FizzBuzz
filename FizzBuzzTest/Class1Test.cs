@@ -155,7 +155,7 @@ namespace FizzBuzzTest
         }
 
         [Fact]
-        public void Should_return_Fizz_when_count_off_given_only_DivisiblBy_Three_Five_and_Seven()
+        public void Should_return_Fizz_when_count_off_given_only_DivisiblByThreeFive_and_Seven()
         {
             // given
             var fizzbuzzgame = new FizzBuzzGame();
