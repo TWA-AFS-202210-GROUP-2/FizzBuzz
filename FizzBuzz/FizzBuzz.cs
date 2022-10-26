@@ -11,6 +11,12 @@ namespace FizzBuzz
         private readonly int seven = 7;
         public string CountOff(int number)
         {
+            bool isNormalNumber = Contain3(number);
+            if (isNormalNumber)
+            {
+                return "Fizz";
+            }
+
             return number.ToString();
         }
 
