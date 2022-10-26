@@ -113,5 +113,16 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("fizz", result);
         }
+
+        [Fact]
+        public void Should_return_fizz_now()
+        {
+            //given
+            var number = 35;
+            //when
+            var result = new Student().Count(number);
+            //then
+            Assert.Equal("fizz", result);
+        }
     }
 }
