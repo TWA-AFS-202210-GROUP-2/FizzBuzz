@@ -55,5 +55,53 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("Whizz", result);
         }
+
+        [Fact]
+        public void Should_FizzBuzz_when_countoff_given_multiply_of_3_and_5()
+        {
+            //given
+            FizzBuzz class1 = new FizzBuzz();
+
+            //when
+            var result = class1.CountOff(15);
+            //then
+            Assert.Equal("FizzBuzz", result);
+        }
+
+        [Fact]
+        public void Should_FizzWhizz_when_countoff_given_multiply_of_3_and_7()
+        {
+            //given
+            FizzBuzz class1 = new FizzBuzz();
+
+            //when
+            var result = class1.CountOff(21);
+            //then
+            Assert.Equal("FizzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_BuzzWhizz_when_countoff_given_multiply_of_5_and_7()
+        {
+            //given
+            FizzBuzz class1 = new FizzBuzz();
+
+            //when
+            var result = class1.CountOff(35);
+            //then
+            Assert.Equal("BuzzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_FizzBuzzWhizz_when_countoff_given_multiply_of_3_and_5_and_7()
+        {
+            //given
+            FizzBuzz class1 = new FizzBuzz();
+
+            //when
+            var result = class1.CountOff(105);
+            //then
+            Assert.Equal("FizzBuzzWhizz", result);
+        }
     }
 }
