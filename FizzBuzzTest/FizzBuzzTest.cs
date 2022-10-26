@@ -6,6 +6,7 @@ using Xunit;
 namespace FizzBuzzTest
 {
     using FizzBuzz;
+
     public class FizzBuzzTest
     {
         [Fact]
@@ -14,7 +15,7 @@ namespace FizzBuzzTest
             //given
             int number = 1;
             var fizzBuzz = new FizzBuzz();
-           //when
+            //when
             string shout = FizzBuzz.CountOff(number);
 
             //then
@@ -24,7 +25,7 @@ namespace FizzBuzzTest
         [Fact]
         public void Should_return_Fizz_when_given_3times_number()
         {
-            //given 
+            //given
             int number = 3;
             var fizzBuzz = new FizzBuzz();
             // when
@@ -39,7 +40,16 @@ namespace FizzBuzzTest
             int number = 5;
             var fizzBuzz = new FizzBuzz();
             var shout = FizzBuzz.CountOff(number);
-            Assert.Equal("Buzz",shout);
+            Assert.Equal("Buzz", shout);
+        }
+
+        [Fact]
+        public void Should_return_Buzz_when_given_7times_number()
+        {
+            int number = 7;
+            var fizzBuzz = new FizzBuzz();
+            var shout = FizzBuzz.CountOff(number);
+            Assert.Equal("Whizz", shout);
         }
     }
 }
