@@ -53,7 +53,7 @@ namespace FizzBuzzTest
             FizzBuzzWhizz fizzBuzz = new FizzBuzzWhizz();
             var countingResult = fizzBuzz.CountingNumber(testNumber);
 
-            Assert.Equal("countingNumber", countingResult);
+            Assert.Equal("19", countingResult);
         }
 
         [Fact]
@@ -79,7 +79,7 @@ namespace FizzBuzzTest
         [Fact]
         public void ShouldSayBuzzWhizzWhen5and7Multiples()
         {
-            var testNumber = 35;
+            var testNumber = 70;
             FizzBuzzWhizz fizzBuzz = new FizzBuzzWhizz();
             var countingResult = fizzBuzz.CountingNumber(testNumber);
 

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Reflection.Metadata;
 
 namespace FizzBuzz
 {
@@ -8,41 +10,128 @@ namespace FizzBuzz
         {
         }
 
+        /*private Enum MultiplesType()
+        {
+            ThreeAndFive,
+            ThreeAndSeven,
+            FiveAndSeven,
+            ThreeAndFiveAndSeven
+        };*/
+
         public string CountingNumber(int num)
         {
-            if (num % 7 == 0)
+            if (!this.InputValidtor(num))
             {
-                return "Whizz";
+                throw new InputNumberNotValidException("input number is not valid!");
+            }
+
+            if (this.ContentThree(num))
+            {
+                return "Fizz";
+            }
+            else if (this.MultiplesOfMany(num).Item1)
+            {
+                return this.MultiplesOfMany(num).Item2;
+            }
+            else if (this.MultipleFive(num).Item1)
+            {
+                return this.MultipleFive(num).Item2;
+            }
+            else if (this.MultipleSeven(num).Item1)
+            {
+                return this.MultipleSeven(num).Item2;
+            }
+            else if (this.MultipleThree(num).Item1)
+            {
+                return this.MultipleThree(num).Item2;
             }
             else
             {
-                return CallBuzz(num - 1);
+                return num.ToString();
             }
         }
 
-        private int CallNumber(int num)
+        private bool InputValidtor(int num)
         {
-            return num;
+            if (num <= 0)
+            {
+                return false;
+            }
+
+            return true;
         }
 
-        private string CallFizz(int num)
+        private bool ContentThree(int num)
         {
-            return "Fizz";
+            var numToStr = num.ToString();
+            if (numToStr.Contains("3"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        private string CallBuzz(int num)
+        private (bool, string) MultipleFive(int num)
         {
-            return "Buzz";
+            if (num % 5 == 0)
+            {
+                return (true, "Buzz");
+            }
+            else
+            {
+                return (false, " ");
+            }
         }
 
-        private string CallWhizz(int num)
+        private (bool, string) MultipleSeven(int num)
         {
-            return "Whizz";
+            if (num % 7 == 0)
+            {
+                return (true, "Whizz");
+            }
+            else
+            {
+                return (false, " ");
+            }
         }
 
-        private string CallFizzBuzz(int num)
+        private (bool, string) MultipleThree(int num)
         {
-            return "WFizzBuzz";
+            if (num % 3 == 0)
+            {
+                return (true, "Fizz");
+            }
+            else
+            {
+                return (false, " ");
+            }
+        }
+
+        private (bool, string) MultiplesOfMany(int num)
+        {
+            if (num % 3 == 0 && num % 5 == 0 && num % 7 == 0)
+            {
+                return (true, "FizzBuzzWhizz");
+            }
+            else if (num % 3 == 0 && num % 5 == 0)
+            {
+                return (true, "FizzBuzz");
+            }
+            else if (num % 3 == 0 && num % 7 == 0)
+            {
+                return (true, "FizzWhizz");
+            }
+            else if (num % 5 == 0 && num % 7 == 0)
+            {
+                return (true, "BuzzWhizz");
+            }
+            else
+            {
+                return (false, " ");
+            }
         }
     }
 }
