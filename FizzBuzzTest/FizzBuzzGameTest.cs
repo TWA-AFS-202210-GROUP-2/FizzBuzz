@@ -65,5 +65,17 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("FizzBuzz", result);
         }
+
+        [Fact]
+        public void Should_return_FizzWhizz_When_CountOff_Given_multiple_of_3_and_7()
+        {
+            //given
+            var fizzBuzz = new FizzBuzzGame();
+            int number = 21;
+            //when
+            var result = fizzBuzz.CountOff(number);
+            //then
+            Assert.Equal("FizzWhizz", result);
+        }
     }
 }
