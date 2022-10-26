@@ -101,5 +101,17 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("FizzBuzzWhizz", result);
         }
+
+        [Fact]
+        public void Should_return_Fizz_When_CountOff_Given_number_contain_3()
+        {
+            //given
+            var fizzBuzz = new FizzBuzzGame();
+            int number = 30;
+            //when
+            var result = fizzBuzz.CountOff(number);
+            //then
+            Assert.Equal("Fizz", result);
+        }
     }
 }
