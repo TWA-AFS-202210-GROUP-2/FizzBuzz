@@ -52,12 +52,40 @@ namespace FizzBuzzTest
             Assert.Equal("Whizz", shout);
         }
 
+        [Fact]
         public void Should_return_FizzBuzz_when_given_3and5times_number()
         {
             int number = 15;
             var fizzBuzz = new FizzBuzz();
             var shout = FizzBuzz.CountOff(number);
             Assert.Equal("FizzBuzz", shout);
+        }
+
+        [Fact]
+        public void Should_return_FizzWhizz_when_given_3and7times_number()
+        {
+            int number = 21;
+            var fizzBuzz = new FizzBuzz();
+            var shout = FizzBuzz.CountOff(number);
+            Assert.Equal("FizzWhizz", shout);
+        }
+
+        [Fact]
+        public void Should_return_BuzzWhizz_when_given_5and7times_number()
+        {
+            int number = 35;
+            var fizzBuzz = new FizzBuzz();
+            var shout = FizzBuzz.CountOff(number);
+            Assert.Equal("BuzzWhizz", shout);
+        }
+
+        [Fact]
+        public void Should_return_FizzBuzzWhizz_when_given_3and5and7times_number()
+        {
+            int number = 105;
+            var fizzBuzz = new FizzBuzz();
+            var shout = FizzBuzz.CountOff(number);
+            Assert.Equal("FizzBuzzWhizz", shout);
         }
     }
 }
