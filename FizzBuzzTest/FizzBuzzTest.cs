@@ -51,5 +51,13 @@ namespace FizzBuzzTest
             var shout = FizzBuzz.CountOff(number);
             Assert.Equal("Whizz", shout);
         }
+
+        public void Should_return_FizzBuzz_when_given_3and5times_number()
+        {
+            int number = 15;
+            var fizzBuzz = new FizzBuzz();
+            var shout = FizzBuzz.CountOff(number);
+            Assert.Equal("FizzBuzz", shout);
+        }
     }
 }
