@@ -9,10 +9,21 @@ namespace FizzBuzzTest
         [Fact]
         public void Test1()
         {
-            Class1 class1 = new Class1();
+            Student class1 = new Student();
 
             //then
             Assert.NotNull(class1);
+        }
+
+        [Fact]
+        public void Should_return_number()
+        {
+            //given
+            var number = 1;
+            //when
+            var result = new Student().Count(number);
+            //then
+            Assert.Equal("1", result);
         }
     }
 }
