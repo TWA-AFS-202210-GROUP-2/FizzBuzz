@@ -119,7 +119,6 @@ namespace FizzBuzzTest
 
             // then
             Assert.Equal("FizzBuzz", result15);
-            Assert.Equal("FizzBuzz", result30);
             Assert.Equal("FizzBuzz", result60);
         }
     }
