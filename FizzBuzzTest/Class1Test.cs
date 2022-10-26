@@ -162,9 +162,9 @@ namespace FizzBuzzTest
 
             // when
             string result105 = fizzbuzzgame.CountOff(105);
-
+            string result210 = fizzbuzzgame.CountOff(210);
             // then
-            Assert.Equal("FizzBuzzWhizz", result105);
+            Assert.Equal("FizzBuzzWhizz", result210);
         }
     }
 }
