@@ -58,5 +58,60 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("wizz", result);
         }
+
+        [Fact]
+        public void Should_return_fizzwizz()
+        {
+            //given
+            var number = 21;
+            //when
+            var result = new Student().Count(number);
+            //then
+            Assert.Equal("fizwizz", result);
+        }
+
+        [Fact]
+        public void Should_return_fizzbizz()
+        {
+            //given
+            var number = 15;
+            //when
+            var result = new Student().Count(number);
+            //then
+            Assert.Equal("fizwizz", result);
+        }
+
+        [Fact]
+        public void Should_return_bizzwizz()
+        {
+            //given
+            var number = 70;
+            //when
+            var result = new Student().Count(number);
+            //then
+            Assert.Equal("bizwizz", result);
+        }
+
+        [Fact]
+        public void Should_return_fizzbizzwizz()
+        {
+            //given
+            var number = 105;
+            //when
+            var result = new Student().Count(number);
+            //then
+            Assert.Equal("fizzbizwizz", result);
+        }
+
+        [Fact]
+        public void Should_return_fizz_also()
+        {
+            //given
+            var number = 13;
+            //when
+            var result = new Student().Count(number);
+            //then
+            Assert.Equal("fizz", result);
+        }
     }
 }
