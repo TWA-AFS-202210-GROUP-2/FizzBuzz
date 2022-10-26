@@ -6,11 +6,17 @@ namespace FizzBuzz
     {
         private readonly int three = 3;
         private readonly int five = 5;
+        private readonly int seven = 7;
         public string CountOff(int number)
         {
             if (number % five == 0)
             {
                 return "Buzz";
+            }
+
+            if (number % seven == 0)
+            {
+                return "Whizz";
             }
 
             return number.ToString();
